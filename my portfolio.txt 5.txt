@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Pari Vishwakarma — BBA Finance student, business enthusiast and aspiring finance professional.">
+
+<title>Pari Vishwakarma | Finance & Business</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#080809;
+    --card:#111114;
+    --card2:#17171b;
+    --text:#f7f4ee;
+    --muted:#aaa6a0;
+    --gold:#e9b949;
+    --gold-light:#f5d487;
+    --border:rgba(255,255,255,.10);
+    --max:1180px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+    radial-gradient(circle at 80% 5%,rgba(233,185,73,.13),transparent 25%),
+    radial-gradient(circle at 10% 40%,rgba(255,255,255,.04),transparent 25%),
+    var(--bg);
+
+    color:var(--text);
+    font-family:"DM Sans",sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+
+    background-size:70px 70px;
+    opacity:.2;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(var(--max),calc(100% - 40px));
+    margin:auto;
+}
+
+.gold{
+    color:var(--gold);
+}
+
+.serif{
+    font-family:"Playfair Display",serif;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:fixed;
+    top:16px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:min(960px,calc(100% - 30px));
+
+    z-index:100;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:11px 14px 11px 20px;
+
+    border:1px solid var(--border);
+    border-radius:50px;
+
+    background:rgba(8,8,9,.75);
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 15px 45px rgba(0,0,0,.3);
+}
+
+.logo{
+    font-weight:700;
+    font-size:1rem;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    gap:5px;
+}
+
+.nav-links a{
+    font-size:.82rem;
+    color:#bdb9b2;
+    padding:8px 12px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    background:rgba(255,255,255,.08);
+    color:white;
+}
+
+.nav-button{
+    background:var(--gold);
+    color:#151108;
+    padding:9px 16px;
+    border-radius:30px;
+    font-size:.8rem;
+    font-weight:700;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:130px 0 70px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+
+    padding:8px 13px;
+
+    border:1px solid rgba(233,185,73,.3);
+    background:rgba(233,185,73,.07);
+
+    border-radius:50px;
+
+    color:var(--gold-light);
+
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.badge-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--gold);
+    box-shadow:0 0 15px var(--gold);
+}
+
+h1{
+    font-size:clamp(3.2rem,7vw,6.5rem);
+    line-height:.92;
+    letter-spacing:-.06em;
+    margin:25px 0;
+}
+
+h1 em{
+    font-family:"Playfair Display",serif;
+    font-style:italic;
+    color:var(--gold);
+}
+
+.hero-description{
+    max-width:620px;
+    color:#c2beb8;
+    font-size:1.05rem;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.button{
+    padding:13px 20px;
+    border-radius:50px;
+    font-size:.88rem;
+    font-weight:700;
+    transition:.3s;
+}
+
+.primary{
+    background:var(--gold);
+    color:#151108;
+}
+
+.secondary{
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.04);
+}
+
+.button:hover{
+    transform:translateY(-4px);
+}
+
+/* ================= PHOTO ================= */
+
+.photo-area{
+    position:relative;
+    max-width:500px;
+    margin-left:auto;
+}
+
+.photo-area::before{
+    content:"";
+
+    position:absolute;
+    inset:8% -5% -4% 8%;
+
+    border:1px solid rgba(233,185,73,.35);
+
+    border-radius:45% 45% 25px 25px;
+
+    transform:rotate(5deg);
+}
+
+.photo-card{
+    position:relative;
+    overflow:hidden;
+
+    border-radius:38% 38% 25px 25px;
+
+    border:1px solid var(--border);
+
+    background:#151517;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.4);
+}
+
+.photo-card img{
+    display:block;
+    width:100%;
+
+    aspect-ratio:4/4.7;
+
+    object-fit:cover;
+    object-position:center top;
+}
+
+.photo-info{
+    position:absolute;
+
+    left:18px;
+    right:18px;
+    bottom:18px;
+
+    padding:14px 16px;
+
+    border:1px solid rgba(255,255,255,.13);
+
+    border-radius:18px;
+
+    background:rgba(10,10,12,.7);
+    backdrop-filter:blur(15px);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.photo-info small{
+    color:#999;
+    font-size:.65rem;
+}
+
+.photo-info strong{
+    display:block;
+}
+
+.float-card{
+    position:absolute;
+
+    padding:13px 16px;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    background:rgba(17,17,20,.85);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+
+    animation:float 5s ease-in-out infinite;
+
+    z-index:2;
+}
+
+.float-card small{
+    color:#888;
+    display:block;
+    font-size:.68rem;
+}
+
+.float-one{
+    left:-30px;
+    top:15%;
+}
+
+.float-two{
+    right:-25px;
+    bottom:18%;
+    animation-delay:1.3s;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+/* ================= TICKER ================= */
+
+.ticker{
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.02);
+}
+
+.ticker-track{
+    display:flex;
+    width:max-content;
+
+    animation:marquee 25s linear infinite;
+}
+
+.ticker-item{
+    padding:16px 28px;
+
+    color:#999;
+
+    font-size:.75rem;
+
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+
+.ticker-item span{
+    color:var(--gold);
+    margin-right:10px;
+}
+
+@keyframes marquee{
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:105px 0;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+
+    gap:30px;
+
+    margin-bottom:42px;
+}
+
+.kicker{
+    color:var(--gold);
+
+    font-size:.7rem;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    font-weight:700;
+}
+
+h2{
+    font-size:clamp(2.3rem,5vw,4rem);
+
+    line-height:1;
+
+    letter-spacing:-.05em;
+
+    margin-top:10px;
+}
+
+.section-header p{
+    max-width:470px;
+    color:var(--muted);
+}
+
+/* ================= BENTO ABOUT ================= */
+
+.bento{
+    display:grid;
+
+    grid-template-columns:1.3fr .7fr .7fr;
+
+    grid-auto-rows:minmax(180px,auto);
+
+    gap:14px;
+}
+
+.card{
+    position:relative;
+
+    overflow:hidden;
+
+    padding:28px;
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.055),
+        rgba(255,255,255,.018)
+    );
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+
+    border-color:rgba(233,185,73,.3);
+}
+
+.card::after{
+    content:"";
+
+    position:absolute;
+
+    width:160px;
+    height:160px;
+
+    border-radius:50%;
+
+    background:rgba(233,185,73,.06);
+
+    filter:blur(35px);
+
+    right:-70px;
+    top:-70px;
+}
+
+.big-card{
+    grid-row:span 2;
+}
+
+.card-number{
+    color:#666;
+
+    font-size:.68rem;
+
+    letter-spacing:.13em;
+}
+
+.quote{
+    font-family:"Playfair Display",serif;
+
+    font-size:2rem;
+
+    line-height:1.2;
+
+    margin-top:55px;
+}
+
+.card p{
+    color:#a6a29c;
+
+    font-size:.9rem;
+}
+
+.big-card p{
+    margin-top:25px;
+}
+
+.card h3{
+    font-size:1.4rem;
+
+    margin:16px 0 8px;
+}
+
+.mini-list{
+    list-style:none;
+
+    margin-top:15px;
+}
+
+.mini-list li{
+    padding:9px 0;
+
+    border-bottom:1px solid var(--border);
+
+    color:#aaa;
+}
+
+/* ================= JOURNEY ================= */
+
+.timeline{
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+
+    position:absolute;
+
+    left:91px;
+
+    top:0;
+    bottom:0;
+
+    width:1px;
+
+    background:var(--border);
+}
+
+.timeline-item{
+    display:grid;
+
+    grid-template-columns:80px 1fr;
+
+    gap:38px;
+
+    padding-bottom:35px;
+}
+
+.timeline-year{
+    color:var(--gold);
+
+    font-weight:700;
+
+    font-size:.78rem;
+}
+
+.timeline-content{
+    position:relative;
+
+    padding:22px 24px;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.025);
+}
+
+.timeline-content::before{
+    content:"";
+
+    position:absolute;
+
+    left:-43px;
+
+    top:27px;
+
+    width:9px;
+    height:9px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    box-shadow:0 0 0 5px rgba(233,185,73,.1);
+}
+
+.timeline-content h3{
+    font-size:1.15rem;
+}
+
+.timeline-content p{
+    color:var(--muted);
+
+    font-size:.88rem;
+
+    margin-top:5px;
+}
+
+/* ================= SKILLS ================= */
+
+.skills{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:12px;
+}
+
+.skill{
+    padding:20px;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.025);
+
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:translateY(-5px);
+
+    border-color:rgba(233,185,73,.3);
+}
+
+.skill-icon{
+    font-size:1.3rem;
+}
+
+.skill strong{
+    display:block;
+
+    margin-top:12px;
+}
+
+.skill span{
+    color:#888;
+
+    font-size:.72rem;
+}
+
+/* ================= EXPERIENCE ================= */
+
+.experience{
+    display:grid;
+
+    grid-template-columns:.75fr 1.25fr;
+
+    gap:16px;
+}
+
+.experience-intro{
+    padding:35px;
+
+    border-radius:28px;
+
+    background:var(--gold);
+
+    color:#17120a;
+}
+
+.experience-intro .kicker{
+    color:#604a18;
+}
+
+.experience-intro h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:2.8rem;
+
+    line-height:1.05;
+
+    margin:18px 0;
+}
+
+.experience-intro p{
+    font-size:.9rem;
+}
+
+.experience-card{
+    padding:32px;
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.025);
+}
+
+.experience-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.experience-card h3{
+    font-size:1.5rem;
+}
+
+.company{
+    color:var(--gold);
+
+    font-weight:700;
+
+    margin-top:3px;
+}
+
+.tag{
+    height:max-content;
+
+    padding:7px 10px;
+
+    border:1px solid var(--border);
+
+    border-radius:50px;
+
+    color:#999;
+
+    font-size:.68rem;
+}
+
+.experience-card > p{
+    color:#999;
+
+    margin-top:18px;
+}
+
+.experience-points{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+    margin-top:24px;
+}
+
+.point{
+    padding:14px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.035);
+
+    color:#999;
+
+    font-size:.8rem;
+}
+
+.point b{
+    color:#ddd;
+
+    display:block;
+
+    margin-bottom:4px;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:14px;
+}
+
+.project{
+    min-height:320px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+}
+
+.project-top{
+    display:flex;
+
+    justify-content:space-between;
+}
+
+.project-icon{
+    font-size:1.8rem;
+}
+
+.project-number{
+    color:#666;
+
+    font-size:.7rem;
+}
+
+.chips{
+    display:flex;
+
+    gap:7px;
+
+    flex-wrap:wrap;
+
+    margin-top:17px;
+}
+
+.chip{
+    padding:6px 9px;
+
+    border-radius:50px;
+
+    background:rgba(233,185,73,.08);
+
+    border:1px solid rgba(233,185,73,.15);
+
+    color:#d8bb78;
+
+    font-size:.67rem;
+}
+
+/* ================= VISION ================= */
+
+.vision{
+    padding:55px;
+
+    border:1px solid rgba(233,185,73,.25);
+
+    border-radius:34px;
+
+    text-align:center;
+
+    background:
+    radial-gradient(
+        circle at 90% 10%,
+        rgba(233,185,73,.14),
+        transparent 30%
+    ),
+    rgba(255,255,255,.025);
+}
+
+.vision h2{
+    max-width:850px;
+
+    margin:12px auto 18px;
+}
+
+.vision p{
+    max-width:650px;
+
+    margin:auto;
+
+    color:#aaa;
+}
+
+.pills{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+    margin-top:28px;
+}
+
+.pill{
+    padding:8px 13px;
+
+    border:1px solid var(--border);
+
+    border-radius:50px;
+
+    color:#bbb;
+
+    font-size:.75rem;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:55px 0 35px;
+
+    border-top:1px solid var(--border);
+}
+
+.footer-grid{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    gap:30px;
+}
+
+.footer-title{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(2.5rem,6vw,5rem);
+
+    line-height:.95;
+
+    letter-spacing:-.06em;
+}
+
+.footer-links{
+    display:flex;
+
+    gap:9px;
+
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+    padding:9px 13px;
+
+    border:1px solid var(--border);
+
+    border-radius:50px;
+
+    color:#aaa;
+
+    font-size:.76rem;
+
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    border-color:var(--gold);
+
+    color:var(--gold);
+}
+
+.copyright{
+    color:#666;
+
+    font-size:.7rem;
+
+    margin-top:50px;
+}
+
+/* ================= ANIMATION ================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(25px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+
+    transform:none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .photo-area{
+        margin:auto;
+    }
+
+    .bento{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .big-card{
+        grid-row:span 1;
+    }
+
+    .skills{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .projects{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .experience{
+        grid-template-columns:1fr;
+    }
+
+    .section-header{
+        display:block;
+    }
+
+    .section-header p{
+        margin-top:15px;
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:calc(100% - 28px);
+    }
+
+    nav{
+        top:9px;
+    }
+
+    .nav-button{
+        display:none;
+    }
+
+    .hero{
+        padding-top:110px;
+    }
+
+    h1{
+        font-size:3.5rem;
+    }
+
+    .float-one{
+        left:-5px;
+    }
+
+    .float-two{
+        right:-5px;
+    }
+
+    section{
+        padding:75px 0;
+    }
+
+    .bento,
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    .skills{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .timeline::before{
+        left:13px;
+    }
+
+    .timeline-item{
+        grid-template-columns:1fr;
+
+        gap:8px;
+
+        padding-left:34px;
+    }
+
+    .timeline-content::before{
+        left:-26px;
+    }
+
+    .experience-points{
+        grid-template-columns:1fr;
+    }
+
+    .vision{
+        padding:35px 22px;
+    }
+
+    .footer-grid{
+        display:block;
+    }
+
+    .footer-links{
+        margin-top:25px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+<a href="#home" class="logo">
+PARI<span>.</span>
+</a>
+
+<div class="nav-links">
+
+<a href="#about">About</a>
+<a href="#journey">Journey</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#work">Work</a>
+
+</div>
+
+<a href="#contact" class="nav-button">
+Let's connect ↗
+</a>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div class="reveal">
+
+<div class="badge">
+<span class="badge-dot"></span>
+BBA • FINANCE • FUTURE PROFESSIONAL
+</div>
+
+<h1>
+
+Learning with
+<em>purpose.</em>
+
+<br>
+
+Growing with
+<em>confidence.</em>
+
+</h1>
+
+<p class="hero-description">
+
+Hi, I'm <strong>Pari Vishwakarma</strong> —
+a BBA Finance student who enjoys understanding business,
+learning new skills and turning classroom knowledge
+into practical experience.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#work" class="button primary">
+Explore my work ↗
+</a>
+
+<a href="#contact" class="button secondary">
+Let's connect
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO -->
+
+<div class="photo-area reveal">
+
+<div class="float-card float-one">
+
+<strong>Finance</strong>
+
+<small>My chosen domain</small>
+
+</div>
+
+
+<div class="float-card float-two">
+
+<strong>Always learning ✦</strong>
+
+<small>One step at a time</small>
+
+</div>
+
+
+<div class="photo-card">
+
+<img
+src="assets/profile.png"
+alt="Professional portrait of Pari Vishwakarma"
+>
+
+<div class="photo-info">
+
+<div>
+
+<small>PERSONAL BRAND</small>
+
+<strong>Pari Vishwakarma</strong>
+
+</div>
+
+<div class="gold">
+✦
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TICKER ================= -->
+
+<div class="ticker">
+
+<div class="ticker-track">
+
+<div class="ticker-item">
+<span>✦</span> Finance
+</div>
+
+<div class="ticker-item">
+<span>✦</span> Business
+</div>
+
+<div class="ticker-item">
+<span>✦</span> Communication
+</div>
+
+<div class="ticker-item">
+<span>✦</span> Curiosity
+</div>
+
+<div class="ticker-item">
+<span>✦</span> Adaptability
+</div>
+
+<div class="ticker-item">
+<span>✦</span> Growth
+</div>
+
+<div class="ticker-item">
+<span>✦</span> Finance
+</div>
+
+<div class="ticker-item">
+<span>✦</span> Business
+</div>
+
+<div class="ticker-item">
+<span>✦</span> Communication
+</div>
+
+<div class="ticker-item">
+<span>✦</span> Curiosity
+</div>
+
+<div class="ticker-item">
+<span>✦</span> Adaptability
+</div>
+
+<div class="ticker-item">
+<span>✦</span> Growth
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div>
+
+<div class="kicker">
+01 / THE PERSON BEHIND THE RESUME
+</div>
+
+<h2>
+More than a
+<br>
+<span class="gold serif">degree.</span>
+</h2>
+
+</div>
+
+<p>
+I believe a strong career is built through curiosity,
+consistency and the willingness to keep improving.
+</p>
+
+</div>
+
+
+<div class="bento">
+
+
+<div class="card big-card reveal">
+
+<div class="card-number">
+01 — ABOUT ME
+</div>
+
+<div class="quote">
+
+“I don't want to just collect qualifications.
+I want to turn what I learn into something useful.”
+
+</div>
+
+<p>
+
+I'm currently pursuing BBA with Finance as my domain.
+I'm interested in business, finance, people and the
+practical side of how organisations work.
+
+I'm a quick learner, adaptable and naturally curious
+about new ideas.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="card-number">
+02 — STRENGTH
+</div>
+
+<h3>
+Quick learner
+</h3>
+
+<p>
+I enjoy learning new concepts and finding
+simpler and smarter ways to complete a task.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="card-number">
+03 — MINDSET
+</div>
+
+<h3>
+Keep evolving
+</h3>
+
+<p>
+Every internship, assignment and presentation
+is another chance to become better.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="card-number">
+04 — BEYOND WORK
+</div>
+
+<h3>
+Creative side
+</h3>
+
+<ul class="mini-list">
+
+<li>🏸 Badminton</li>
+<li>🎨 Crafting</li>
+<li>✈️ Travelling</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= JOURNEY ================= -->
+
+<section id="journey">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div>
+
+<div class="kicker">
+02 / MY JOURNEY
+</div>
+
+<h2>
+
+Still building.
+
+<br>
+
+<span class="gold serif">
+Still becoming.
+</span>
+
+</h2>
+
+</div>
+
+<p>
+A timeline of the experiences shaping my professional direction.
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-year">
+START
+</div>
+
+<div class="timeline-content">
+
+<h3>
+Business Foundation
+</h3>
+
+<p>
+Started my BBA journey and explored different
+areas of management and business.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-year">
+NOW
+</div>
+
+<div class="timeline-content">
+
+<h3>
+Finance as My Domain
+</h3>
+
+<p>
+Chose Finance and started building practical
+knowledge around business, numbers and decision-making.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-year">
+EXP
+</div>
+
+<div class="timeline-content">
+
+<h3>
+Reliance Smart Bazaar Internship
+</h3>
+
+<p>
+Gained practical exposure to a real retail environment
+and learned how business works beyond textbooks.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-year">
+LEARN
+</div>
+
+<div class="timeline-content">
+
+<h3>
+AI for All
+</h3>
+
+<p>
+Exploring AI tools and workflows to understand
+how technology can support modern business work.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-year">
+NEXT
+</div>
+
+<div class="timeline-content">
+
+<h3>
+Build → Learn → Contribute
+</h3>
+
+<p>
+My goal is to gain stronger finance skills,
+meaningful internships and experience in a reputed organisation.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div>
+
+<div class="kicker">
+03 / WHAT I BRING
+</div>
+
+<h2>
+
+Skills with a
+<br>
+
+<span class="gold serif">
+human side.
+</span>
+
+</h2>
+
+</div>
+
+<p>
+Not just tools — these are the abilities
+I'm actively developing for the workplace.
+</p>
+
+</div>
+
+
+<div class="skills">
+
+
+<div class="skill reveal">
+<div class="skill-icon">📊</div>
+<strong>Finance</strong>
+<span>Core domain</span>
+</div>
+
+
+<div class="skill reveal">
+<div class="skill-icon">📈</div>
+<strong>Business Analysis</strong>
+<span>Learning & applying</span>
+</div>
+
+
+<div class="skill reveal">
+<div class="skill-icon">🧩</div>
+<strong>Problem Solving</strong>
+<span>Practical mindset</span>
+</div>
+
+
+<div class="skill reveal">
+<div class="skill-icon">⚡</div>
+<strong>Adaptability</strong>
+<span>Comfort with change</span>
+</div>
+
+
+<div class="skill reveal">
+<div class="skill-icon">🎤</div>
+<strong>Communication</strong>
+<span>Actively improving</span>
+</div>
+
+
+<div class="skill reveal">
+<div class="skill-icon">🤝</div>
+<strong>Teamwork</strong>
+<span>Collaborative approach</span>
+</div>
+
+
+<div class="skill reveal">
+<div class="skill-icon">🤖</div>
+<strong>AI Tools</strong>
+<span>AI for All learning</span>
+</div>
+
+
+<div class="skill reveal">
+<div class="skill-icon">💡</div>
+<strong>Curiosity</strong>
+<span>Always learning</span>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div>
+
+<div class="kicker">
+04 / EXPERIENCE
+</div>
+
+<h2>
+
+Where learning
+<br>
+
+met <span class="gold serif">reality.</span>
+
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="experience">
+
+
+<div class="experience-intro reveal">
+
+<div class="kicker">
+INTERNSHIP
+</div>
+
+<h3>
+My first taste of the professional world.
+</h3>
+
+<p>
+Real environments teach things that classrooms can't —
+observation, discipline, teamwork and understanding customers.
+</p>
+
+</div>
+
+
+<div class="experience-card reveal">
+
+<div class="experience-top">
+
+<div>
+
+<h3>
+Retail Internship
+</h3>
+
+<div class="company">
+Reliance Smart Bazaar
+</div>
+
+</div>
+
+<div class="tag">
+EXPERIENCE
+</div>
+
+</div>
+
+
+<p>
+
+A practical learning experience that helped me
+observe retail operations and understand how
+business concepts translate into day-to-day work.
+
+</p>
+
+
+<div class="experience-points">
+
+
+<div class="point">
+
+<b>Customer Exposure</b>
+
+Observed real customer interactions
+and retail behaviour.
+
+</div>
+
+
+<div class="point">
+
+<b>Business Learning</b>
+
+Connected classroom concepts
+with a working retail environment.
+
+</div>
+
+
+<div class="point">
+
+<b>Team Environment</b>
+
+Learned the importance of coordination
+and responsibility.
+
+</div>
+
+
+<div class="point">
+
+<b>Professional Growth</b>
+
+Built confidence through practical exposure.
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="work">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div>
+
+<div class="kicker">
+05 / SELECTED WORK
+</div>
+
+<h2>
+
+Things I've
+<br>
+
+<span class="gold serif">
+worked on.
+</span>
+
+</h2>
+
+</div>
+
+<p>
+Academic and practical work that represents
+how I think, research and present ideas.
+</p>
+
+</div>
+
+
+<div class="projects">
+
+
+<div class="card project reveal">
+
+<div>
+
+<div class="project-top">
+
+<div class="project-icon">
+📊
+</div>
+
+<div class="project-number">
+01
+</div>
+
+</div>
+
+<h3>
+Finance & Business Analysis
+</h3>
+
+<p>
+Academic work focused on understanding
+business situations, financial concepts
+and decision-making.
+</p>
+
+<div class="chips">
+
+<span class="chip">Finance</span>
+<span class="chip">BBA</span>
+<span class="chip">Analysis</span>
+
+</div>
+
+</div>
+
+<div class="card-number">
+LEARNING PROJECT
+</div>
+
+</div>
+
+
+<div class="card project reveal">
+
+<div>
+
+<div class="project-top">
+
+<div class="project-icon">
+🤖
+</div>
+
+<div class="project-number">
+02
+</div>
+
+</div>
+
+<h3>
+AI for All
+</h3>
+
+<p>
+Learning how AI tools and workflows can make
+everyday business tasks more efficient and creative.
+</p>
+
+<div class="chips">
+
+<span class="chip">AI</span>
+<span class="chip">Productivity</span>
+<span class="chip">Learning</span>
+
+</div>
+
+</div>
+
+<div class="card-number">
+CURRENT LEARNING
+</div>
+
+</div>
+
+
+<div class="card project reveal">
+
+<div>
+
+<div class="project-top">
+
+<div class="project-icon">
+🎪
+</div>
+
+<div class="project-number">
+03
+</div>
+
+</div>
+
+<h3>
+Exhibition & Event Work
+</h3>
+
+<p>
+Participated in an exhibition experience that
+strengthened teamwork, coordination and presentation.
+</p>
+
+<div class="chips">
+
+<span class="chip">Teamwork</span>
+<span class="chip">Presentation</span>
+<span class="chip">Event</span>
+
+</div>
+
+</div>
+
+<div class="card-number">
+PRACTICAL EXPERIENCE
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CAREER VISION ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="vision reveal">
+
+<div class="kicker">
+06 / CAREER VISION
+</div>
+
+<h2>
+
+From a curious student to a
+<span class="gold serif">
+confident professional.
+</span>
+
+</h2>
+
+<p>
+
+I want to build strong finance and business skills,
+gain meaningful industry exposure and contribute
+to an organisation where learning and impact go together.
+
+</p>
+
+
+<div class="pills">
+
+<span class="pill">Finance</span>
+<span class="pill">Business</span>
+<span class="pill">MNC Opportunities</span>
+<span class="pill">Continuous Learning</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<footer id="contact">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="kicker">
+07 / LET'S CONNECT
+</div>
+
+<div class="footer-title">
+
+Let's make
+<br>
+
+<span class="gold">
+something meaningful.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="footer-links">
+
+<a
+href="https://github.com/pari9026861552-debug"
+target="_blank">
+GitHub ↗
+</a>
+
+<a
+href="https://www.linkedin.com/"
+target="_blank">
+LinkedIn ↗
+</a>
+
+<a href="mailto:YOUR_EMAIL@gmail.com">
+Email ↗
+</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span>
+Pari Vishwakarma · Built with curiosity, creativity & consistency.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* Current year */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* Scroll reveal animation */
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},
+
+{
+threshold:.12
+}
+
+);
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(element=>{
+
+observer.observe(element);
+
+});
+
+
+/* Smooth navigation */
+
+document
+.querySelectorAll('a[href^="#"]')
+.forEach(link=>{
+
+link.addEventListener("click",function(e){
+
+const target =
+document.querySelector(this.getAttribute("href"));
+
+if(target){
+
+e.preventDefault();
+
+target.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+});
+
+});
+
+</script>
+
+
+</body>
+</html>
